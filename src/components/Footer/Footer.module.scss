@@ -1,0 +1,22 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+
+.footer_navbar {
+  @include flexed;
+  width: 100%;
+  padding: 40px 0;
+  .inner {
+    @include flexed;
+    gap: 32px;
+  }
+}
+
+.footer_bottom {
+  @include flexed;
+  padding: 40px 0;
+  border-top: 1px solid #0000000d;
+  .social__medias {
+    @include flexed;
+    gap: 16px;
+  }
+}

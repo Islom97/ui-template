@@ -1,0 +1,7 @@
+@import "../../styles/mixins";
+.banner {
+  margin: 26px 0 50px;
+  width: 100%;
+
+  @include responsive-image(768px);
+}

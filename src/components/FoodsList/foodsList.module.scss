@@ -1,0 +1,53 @@
+@use "../../styles/colors.scss";
+@import "../../styles/mixins.scss";
+
+.foods {
+  padding: 0 0 50px;
+  .foods__title {
+    @include texted(28px, 600, 32px);
+    margin-bottom: 20px;
+  }
+}
+
+.list {
+  @include responsive-grid(1200px, 4);
+  @include responsive-grid(992px, 3);
+  @include responsive-grid(768px, 2);
+  @include responsive-grid(576px, 1);
+
+  li {
+    padding: 16px;
+    box-shadow: 0px 0px 12px 0px #0000000d;
+    border-radius: 16px;
+
+    .card__image {
+      height: 220px;
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    .card__content {
+      .card__title {
+        @include texted(18px, 600, 24px);
+        margin-bottom: 10px;
+      }
+      .card__description {
+        @include texted(14px, 400, 20px);
+        margin-bottom: 12px;
+      }
+    }
+    .item_footer {
+      @include flexed;
+      .card__price {
+        @include texted(18px, 600, 20px);
+        .price__addition {
+          @include texted(14px, 400, 20px);
+          color: colors.$secondary;
+        }
+      }
+      .card__button {
+        @include button;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+
+  .logo {
+    @include flexed;
+    padding-right: 40px;
+  }
+
+  .navbar {
+    @include flexed;
+    width: 100%;
+    @include responsive-hide(768px);
+
+    .inner {
+      @include flexed;
+      gap: 32px;
+
+      .innerRight {
+        @include flexed;
+        gap: 8px;
+
+        .locationIcon {
+          @include iconed(7px 7px 4px, 15px);
+        }
+
+        .iconText {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          p {
+            &:last-child {
+              color: $main;
+            }
+          }
+        }
+
+        .cartIcon {
+          @include iconed(9px 8px 6px 10px, 18px);
+        }
+
+        .userIcon {
+          @include iconed(9px 8px 6px 9px, 18px);
+        }
+      }
+    }
+  }
+}

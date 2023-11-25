@@ -1,0 +1,19 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+
+.list {
+  @include flexed;
+  gap: 18px;
+  padding: 0 0 40px;
+  max-width: 920px;
+  width: 100%;
+  overflow-x: auto;
+
+  .item {
+    cursor: pointer;
+    &:first-child {
+      @include iconed(12px 16px, 16px);
+      color: $main;
+    }
+  }
+}
